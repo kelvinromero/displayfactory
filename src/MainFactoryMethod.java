@@ -17,7 +17,7 @@ public class MainFactoryMethod {
 
 
         factory = new FoldableSmartphoneDisplayFactory();
-        display = factory.create(new double[]{6.7, 6.2});
+        display = factory.create(new double[]{10.7, 5.3});
         System.out.println(display);
     }
 

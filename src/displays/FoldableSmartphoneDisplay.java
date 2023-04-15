@@ -8,11 +8,12 @@ public class FoldableSmartphoneDisplay extends FoldableDisplay {
 
         @Override
         public void assemble() {
-            System.out.println("Assembling Foldable Smartphone Display");
+            System.out.println("Montando display para SMARTPHONE DOBRAVEL");
+            features = getInches() + "\" Foldable Smartphone Display";
         }
 
         @Override
         public String toString() {
-            return "Foldable Smartphone Display: " + diagonalSize + " inches";
+            return features;
         }
 }

@@ -13,18 +13,22 @@ public abstract class FoldableDisplayFactory implements DisplayFactory {
     public FoldableDisplay create(double[] inches) {
         FoldableDisplay display = createDisplay(inches[0], inches[1]);
         display.assemble();
+        qualityTest(display);
         return display;
     }
 
     @Override
     public void qualityTest(Display display) {
-        System.out.println("Testando qualidade do display");
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        System.out.print("Teste de Qualidade: ");
+        for (int i = 1; i < 4; i++) {
+            System.out.print(  "[*] ");
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
-        System.out.println("Display OK");
+        System.out.println(" OK (passed)");
     }
 
     // Metodo de fabrica
